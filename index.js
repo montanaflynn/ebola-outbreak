@@ -6,7 +6,7 @@ var predictor = require("predictor")
 module.exports = {
 	cases : function(callback) {
 		if (!checkForDataUpdate()) {
-			callback(null, require('./data/cases.json'))
+			callback(false, require('./data/cases.json'))
 			return
 		}
 		unirest
@@ -55,7 +55,13 @@ module.exports = {
 			}
 			callback(err, data)
 		})
-	}
+	},
+  update : function(callback) {
+    this.cases(function(err, response){
+      if (err) return callback(err, response)
+      callback(false, response)
+    })
+  }
 }
 
 function growthRate(data, model) {
