@@ -38,3 +38,4 @@ ebola.project(5, 'average', function(err, output){
 - Include death counts
 - Better projection models
 - Write tests with framework
+- Add different output types
