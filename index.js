@@ -35,7 +35,7 @@ module.exports = {
       })
     })
   },
-  project: function(distance, model, callback) {
+  project: function(distance, callback) {
     this.cases(function(err, data) {
       if (err) return callback(err, false)
       var data = data.map(function(datum) {
@@ -49,7 +49,7 @@ module.exports = {
       var guesses = []
       while (distance > 0) {
         var last = cleanData[data.length - 1]
-        var growth = growthRate(cleanData, model)
+        var growth = growthRate(cleanData)
         var guess = Math.floor(last * growth)
         cleanData.push(guess)
         var newDate = new Date(data[data.length - 1]['date'])
@@ -75,26 +75,10 @@ module.exports = {
   }
 }
 
-function growthRate(data, model) {
-  if (model === "latest" || !model) {
-    var current = data[data.length - 1]
-    var previous = data[data.length - 2]
-    return (current / previous)
-  }
-
-  if (model === "average") {
-    var rates = []
-    for (var i = 0; i < data.length; i++) {
-      var current = data[i]
-      var previous = data[i - 1] || 1
-      rates.push(current / previous)
-    }
-    var sum = rates.reduce(function(a, b) {
-      return a + b
-    })
-    var avg = sum / rates.length
-    return avg
-  }
+function growthRate(data) {
+  var current = data[data.length - 1]
+  var previous = data[data.length - 2]
+  return (current / previous)
 }
 
 function checkForDataUpdate() {

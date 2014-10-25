@@ -19,17 +19,12 @@ ebola.cases(function(err, output){
 	console.log(output)
 })
 
-// Return confirmed cases plus 5 projections with the 'latest' model:
-ebola.project(5, 'latest', function(err, output){
+// Return confirmed cases plus 5 projections:
+ebola.project(5, function(err, output){
 	if (err) throw err
 	console.log(output)
 })
 
-// Return confirmed cases plus 5 projections with the 'average' model:
-ebola.project(5, 'average', function(err, output){
-	if (err) throw err
-	console.log(output)
-})
 ```
 
 ### Todos
