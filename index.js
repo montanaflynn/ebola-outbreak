@@ -1,7 +1,6 @@
 var fs = require('fs')
 var unirest = require('unirest')
 var parse = require('csv-parse')
-var predictor = require("predictor")
 
 var dataFile = __dirname + '/data/cases.json'
 
