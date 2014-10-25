@@ -9,9 +9,8 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "csv-parse": "0.0.6",
-    "predictor": "0.0.0",
-    "unirest": "^0.2.9"
+    "unirest": "^0.2.9",
+    "csv-parse": "0.0.6"
   },
   "homepage": "https://github.com/montanaflynn/ebola-outbreak",
   "repository": {
