@@ -3,7 +3,7 @@ var unirest = require('unirest')
 var parse = require('csv-parse')
 var predictor = require("predictor")
 
-var dataFile = './data/cases.json'
+var dataFile = __dirname + '/data/cases.json'
 
 module.exports = {
   cases: function(callback) {
