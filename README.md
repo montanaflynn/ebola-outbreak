@@ -15,7 +15,6 @@ var ebola = require('ebola-outbreak')
 
 // Return all the confirmed cases
 ebola.cases(function(err, output){
-	console.log("Testing returning all the cases: \n")
 	if (err) throw err
 	console.log(output)
 })
@@ -38,4 +37,4 @@ ebola.project(5, 'average' ,function(err, output){
 - Add country specific data
 - Include death counts
 - Better projection models
-- Write tests
+- Write tests with framework
