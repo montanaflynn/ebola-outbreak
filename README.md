@@ -1,8 +1,8 @@
 # Ebola Confirmed Cases
 
-Built this to help spread awareness about the ongoing Ebola outbreak. Powered by data obtained from [HealthMap](http://healthmap.org/ebola/) who in turn got it from the [World Health Organization](http://www.who.int/en/). 
+Built this to help spread awareness about the ongoing Ebola outbreak. 
 
-The data is updated every 18 days. 
+Powered by data obtained from [HealthMap](http://healthmap.org/ebola/) who in turn got it from the [World Health Organization](http://www.who.int/en/). The data is updated every 18 days. 
 
 ## Install
 
