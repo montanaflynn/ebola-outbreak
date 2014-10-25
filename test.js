@@ -30,8 +30,6 @@ function runTests() {
       console.log("\033[31m", "Test Failed", "\033[0m \n")
     }
 
-    console.log(output)
-
   })
 
   // Update data in './data/cases.json'
