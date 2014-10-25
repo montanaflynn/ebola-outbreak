@@ -21,7 +21,8 @@ module.exports = {
 			  		if (output[i][1] != 'X') {
 						response.push({
 							date : new Date(output[i][0]).toISOString(),
-							cases :  output[i][1]
+              cases :  output[i][1],
+              status :  'confirmed'
 						})
 					}
 				}
@@ -47,7 +48,8 @@ module.exports = {
 				newDate.setHours(24*18)
 				data.push({
 					date : newDate.toISOString(),
-					cases : guess
+					cases : guess,
+          status :  'projection'
 				})
 				distance--
 			}
