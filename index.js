@@ -86,7 +86,6 @@ function checkForDataUpdate() {
 	lastDataDate.setHours(24*18)
 	var newDataTimestamp = lastDataDate.getTime()
 	var currentTimestamp = new Date().getTime()
-	console.log(newDataTimestamp, currentTimestamp)
 	if (currentTimestamp > newDataTimestamp) {
 		return true
 	}
