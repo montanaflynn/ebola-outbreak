@@ -1,4 +1,7 @@
+var fs = require('fs')
 var ebola = require('./index.js')
+
+fs.unlinkSync("./data/cases.json")
 
 // Return all the confirmed cases
 ebola.cases(function(err, output){
