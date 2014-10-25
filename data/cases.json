@@ -1,110 +1,146 @@
 [
   {
     "date": "2013-12-06T00:00:00.000Z",
-    "cases": 1,
-    "cumulative": 1,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 1,
+      "total": 1
+    }
   },
   {
     "date": "2013-12-24T00:00:00.000Z",
-    "cases": 9,
-    "cumulative": 10,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 9,
+      "total": 10
+    }
   },
   {
     "date": "2014-01-11T00:00:00.000Z",
-    "cases": 17,
-    "cumulative": 26,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 17,
+      "total": 27
+    }
   },
   {
     "date": "2014-01-29T00:00:00.000Z",
-    "cases": 25,
-    "cumulative": 42,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 25,
+      "total": 52
+    }
   },
   {
     "date": "2014-02-16T00:00:00.000Z",
-    "cases": 33,
-    "cumulative": 58,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 33,
+      "total": 85
+    }
   },
   {
     "date": "2014-03-06T00:00:00.000Z",
-    "cases": 41,
-    "cumulative": 74,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 41,
+      "total": 126
+    }
   },
   {
     "date": "2014-03-24T00:00:00.000Z",
-    "cases": 86,
-    "cumulative": 127,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 86,
+      "total": 212
+    }
   },
   {
     "date": "2014-04-11T00:00:00.000Z",
-    "cases": 186,
-    "cumulative": 272,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 186,
+      "total": 398
+    }
   },
   {
     "date": "2014-04-29T00:00:00.000Z",
-    "cases": 247,
-    "cumulative": 433,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 247,
+      "total": 645
+    }
   },
   {
     "date": "2014-05-17T00:00:00.000Z",
-    "cases": 265,
-    "cumulative": 512,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 265,
+      "total": 910
+    }
   },
   {
     "date": "2014-06-04T00:00:00.000Z",
-    "cases": 433,
-    "cumulative": 698,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 433,
+      "total": 1343
+    }
   },
   {
     "date": "2014-06-22T00:00:00.000Z",
-    "cases": 587,
-    "cumulative": 1020,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 587,
+      "total": 1930
+    }
   },
   {
     "date": "2014-07-10T00:00:00.000Z",
-    "cases": 888,
-    "cumulative": 1475,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 888,
+      "total": 2818
+    }
   },
   {
     "date": "2014-07-28T00:00:00.000Z",
-    "cases": 1293,
-    "cumulative": 2181,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 1293,
+      "total": 4111
+    }
   },
   {
     "date": "2014-08-15T00:00:00.000Z",
-    "cases": 2127,
-    "cumulative": 3420,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 2127,
+      "total": 6238
+    }
   },
   {
     "date": "2014-09-02T00:00:00.000Z",
-    "cases": 3525,
-    "cumulative": 5652,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 3525,
+      "total": 9763
+    }
   },
   {
     "date": "2014-09-20T00:00:00.000Z",
-    "cases": 5606,
-    "cumulative": 9131,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 5606,
+      "total": 15369
+    }
   },
   {
     "date": "2014-10-08T00:00:00.000Z",
-    "cases": 8033,
-    "cumulative": 13639,
-    "status": "confirmed"
+    "status": "confirmed",
+    "cases": {
+      "new": 8033,
+      "total": 23402
+    }
   }
 ]

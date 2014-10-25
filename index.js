@@ -16,23 +16,21 @@ module.exports = {
       parse(res.body, function(err, output) {
         if (typeof output !== "object") return callback(true, res)
         output.shift()
-        var response = []
+        var data = []
         var last = 0
         for (var i = 0; i < output.length; i++) {
           if (output[i][1] != 'X') {
             var cases = parseInt(output[i][1])
-            var cumulative = last + cases
-            response.push({
+            data.push({
               date: new Date(output[i][0]).toISOString(),
               cases: cases,
-              cumulative: cumulative,
               status: 'confirmed'
             })
-            last = parseInt(output[i][1])
           }
         }
-        saveData(response, function() {
-          callback(err, response)
+        var output = mungeData(data, 'cases')
+        saveData(output, function() {
+          callback(err, output)
         })
       })
     })
@@ -55,12 +53,12 @@ module.exports = {
         data.push({
           date: newDate.toISOString(),
           cases: guess,
-          cumulative: guess + last,
           status: 'projection'
         })
         distance--
       }
-      callback(err, data)
+      var output = mungeData(data, 'cases')
+      callback(err, output)
     })
   },
   update: function(callback) {
@@ -114,4 +112,19 @@ function saveData(data, callback) {
     if (err) throw err
     callback()
   })
+}
+
+function mungeData(source, property) {
+  var sum = 0;
+  return source.map(function(current) {
+    var cumulative = sum + current[property];
+    sum += current[property];
+    var datoid = {
+      "new" : current[property],
+      "total" : cumulative
+    }
+    delete current[property]
+    current[property] = datoid
+    return current;
+  });  
 }
