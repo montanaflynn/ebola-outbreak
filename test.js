@@ -4,7 +4,7 @@ var ebola = require('./index.js')
 ebola.cases(function(err, output){
 	console.log("Testing returning all confirmed cases")
 	if (err) 
-		console.log("\033[31m", "Test Failed", "\033[0m \n")
+		return console.log("\033[31m", "Test Failed", "\033[0m \n")
 
 	if (typeof output === "object") {
 		console.log("\033[32m", "Test Passed", "\033[0m \n")
@@ -17,7 +17,7 @@ ebola.cases(function(err, output){
 ebola.project(5, 'latest' ,function(err, output){
 	console.log("Testing confirmed cases plus 5 projections with the 'latest' model")
 	if (err) 
-		console.log("\033[31m", "Test Failed", "\033[0m \n")
+		return console.log("\033[31m", "Test Failed", "\033[0m \n")
 
 	if (typeof output === "object") {
 		console.log("\033[32m", "Test Passed", "\033[0m \n")
@@ -30,7 +30,7 @@ ebola.project(5, 'latest' ,function(err, output){
 ebola.project(5, 'average' ,function(err, output){
 	console.log("Testing confirmed cases plus 5 projections with the 'average' model")
 	if (err) 
-		console.log("\033[31m", "Test Failed", "\033[0m \n")
+		return console.log("\033[31m", "Test Failed", "\033[0m \n")
 
 	if (typeof output === "object") {
 		console.log("\033[32m", "Test Passed", "\033[0m \n")
@@ -43,7 +43,7 @@ ebola.project(5, 'average' ,function(err, output){
 ebola.update(function(err, output){
 	console.log("Testing updating the data")
 	if (err) 
-		console.log("\033[31m", "Test Failed", "\033[0m \n")
+		return console.log("\033[31m", "Test Failed", "\033[0m \n")
 	
 	if (typeof output === "object") {
 		console.log("\033[32m", "Test Passed", "\033[0m \n")
