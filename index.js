@@ -38,9 +38,13 @@ module.exports = {
   project: function(distance, model, callback) {
     this.cases(function(err, data) {
       if (err) return callback(err, false)
-      var originalData = data
+      var data = data.map(function(datum) {
+        var originalData = parseInt(datum.cases['new'])
+        datum['cases'] = originalData
+        return datum
+      })      
       var cleanData = data.map(function(datum) {
-        return parseInt(datum.cases)
+        return datum.cases
       })
       var guesses = []
       while (distance > 0) {
@@ -57,7 +61,9 @@ module.exports = {
         })
         distance--
       }
+      // console.log(data)
       var output = mungeData(data, 'cases')
+      console.log(output)
       callback(err, output)
     })
   },
