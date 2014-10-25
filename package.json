@@ -1,6 +1,6 @@
 {
   "name": "ebola-outbreak",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Ebola confirmed cases and simple projections",
   "author": "Montana Flynn",
   "main": "index.js",
