@@ -15,6 +15,7 @@ module.exports = {
 
 		function parseResponse(res) {
 			parse(res.body, function(err, output){
+          if (typeof output !== "object") return callback(true, res)
 			  	output.shift()
 			  	var response = []
 			  	for (var i = 0; i < output.length; i++) {
@@ -34,6 +35,7 @@ module.exports = {
 	},
 	project : function(distance, model, callback) {
 		this.cases(function(err, data){
+      if (err) return callback(err, false)
 			var originalData = data
 			var cleanData = data.map(function(datum) {
 			  return datum.cases;
