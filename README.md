@@ -1,15 +1,14 @@
 # Ebola Confirmed Cases
 
-Built this to help spread awareness about the ongoing Ebola outbreak. 
+Built this to help spread awareness about the ongoing Ebola outbreak. Powered by data obtained from [HealthMap](http://healthmap.org/ebola/) who in turn got it from the [World Health Organization](http://www.who.int/en/).
 
 ## Install
 
-npm install ebola-cases --save
+npm install ebola-outbreak --save
 
 ## Usage
 
-var ebola = require('./index.js')
-var project = require('./project.js')
+var ebola = require('ebola-outbreak')
 
 // Return all the confirmed cases
 ebola.cases(function(err, output){
