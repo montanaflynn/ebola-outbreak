@@ -88,5 +88,10 @@
     "date": "2014-10-08T00:00:00.000Z",
     "cases": 8033,
     "status": "confirmed"
+  },
+  {
+    "date": "2014-10-25T00:00:00.000Z",
+    "cases": 10141,
+    "status": "confirmed"
   }
 ]
