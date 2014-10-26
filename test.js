@@ -32,6 +32,20 @@ function runTests() {
 
   })
 
+  // Return the latest growth rate:
+  ebola.rate(function(err, output){
+    console.log("Testing the latest growth rate")
+    if (err) 
+      return console.log("\033[31m", "Test Failed", "\033[0m \n")
+
+    if (typeof output === "string") {
+      console.log("\033[32m", "Test Passed", "\033[0m \n")
+    } else {
+      console.log("\033[31m", "Test Failed", "\033[0m \n")
+    }
+
+  })
+
   // Update data in './data/cases.json'
   ebola.update(function(err, output){
     console.log("Testing updating the data")

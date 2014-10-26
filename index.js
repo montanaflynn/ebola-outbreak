@@ -20,6 +20,12 @@ module.exports = {
       callback(err, output)
     })
   },
+  rate: function(callback) {
+    this.cases(function(err, data) {
+      if (err) return callback(err, false)
+      callback(err, growthRate(data))
+    })
+  },
   update: function(callback) {
     this.cases(function(err, response) {
       if (err) return callback(err, response)
@@ -79,6 +85,21 @@ function cleanData(input) {
   return data
 }
 
+function pluckData(data) {
+  var regressionData = []
+  for (var i = 0; i < data.length; i++) {
+    var datum
+    if (!data[i]) {
+      datum = null
+    } else {
+      datum = data[i].cases
+    }
+
+    regressionData.push([i,datum])
+  }
+  return regressionData
+}
+
 function projectData(distance, data) {
 
   // Get last date
@@ -100,18 +121,7 @@ function projectData(distance, data) {
     distance--
   }
 
-  // Get the data in usable form
-  var regressionData = []
-  for (var i = 0; i < data.length; i++) {
-    var datum
-    if (!data[i]) {
-      datum = null
-    } else {
-      datum = data[i].cases
-    }
-
-    regressionData.push([i,datum])
-  }
+  var regressionData = pluckData(data)
 
   // Build the projection model
   var model = regression('exponential', regressionData).points
@@ -128,6 +138,11 @@ function projectData(distance, data) {
 
   // Voila
   return data
+}
+
+function growthRate(data) {
+  var regressionData = pluckData(data)
+  return regression('exponential', regressionData).string
 }
 
 function saveData(data, callback) {

@@ -14,15 +14,21 @@ npm install ebola-outbreak --save
 var ebola = require('ebola-outbreak')
 
 // Return all the confirmed cases
-ebola.cases(function(err, output){
+ebola.cases(function(err, cases){
 	if (err) throw err
-	console.log(output)
+	console.log(cases)
 })
 
 // Return confirmed cases plus 5 projections:
-ebola.project(5, function(err, output){
+ebola.project(5, function(err, data){
 	if (err) throw err
-	console.log(output)
+	console.log(data)
+})
+
+// Return the latest growth rate:
+ebola.rate(function(err, rate){
+    if (err) throw err
+    console.log(rate)
 })
 
 ```
@@ -31,6 +37,5 @@ ebola.project(5, function(err, output){
 
 - Add country specific data
 - Include death counts
-- Better projection models
 - Write tests with framework
 - Add different output types
