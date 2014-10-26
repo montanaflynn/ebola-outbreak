@@ -9,8 +9,9 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "unirest": "^0.2.9",
-    "csv-parse": "0.0.6"
+    "csv-parse": "0.0.6",
+    "regression": "^1.2.0",
+    "unirest": "^0.2.9"
   },
   "homepage": "https://github.com/montanaflynn/ebola-outbreak",
   "repository": {
@@ -19,7 +20,8 @@
   },
   "bugs": {
     "url": "https://github.com/montanaflynn/ebola-outbreak/issues"
-  },"keywords": [
+  },
+  "keywords": [
     "ebola",
     "outbreak",
     "health",

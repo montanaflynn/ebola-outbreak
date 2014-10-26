@@ -1,146 +1,92 @@
 [
   {
     "date": "2013-12-06T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 1,
-      "total": 1
-    }
+    "cases": 1,
+    "status": "confirmed"
   },
   {
     "date": "2013-12-24T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 9,
-      "total": 10
-    }
+    "cases": 9,
+    "status": "confirmed"
   },
   {
     "date": "2014-01-11T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 17,
-      "total": 27
-    }
+    "cases": 17,
+    "status": "confirmed"
   },
   {
     "date": "2014-01-29T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 25,
-      "total": 52
-    }
+    "cases": 25,
+    "status": "confirmed"
   },
   {
     "date": "2014-02-16T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 33,
-      "total": 85
-    }
+    "cases": 33,
+    "status": "confirmed"
   },
   {
     "date": "2014-03-06T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 41,
-      "total": 126
-    }
+    "cases": 41,
+    "status": "confirmed"
   },
   {
     "date": "2014-03-24T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 86,
-      "total": 212
-    }
+    "cases": 86,
+    "status": "confirmed"
   },
   {
     "date": "2014-04-11T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 186,
-      "total": 398
-    }
+    "cases": 186,
+    "status": "confirmed"
   },
   {
     "date": "2014-04-29T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 247,
-      "total": 645
-    }
+    "cases": 247,
+    "status": "confirmed"
   },
   {
     "date": "2014-05-17T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 265,
-      "total": 910
-    }
+    "cases": 265,
+    "status": "confirmed"
   },
   {
     "date": "2014-06-04T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 433,
-      "total": 1343
-    }
+    "cases": 433,
+    "status": "confirmed"
   },
   {
     "date": "2014-06-22T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 587,
-      "total": 1930
-    }
+    "cases": 587,
+    "status": "confirmed"
   },
   {
     "date": "2014-07-10T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 888,
-      "total": 2818
-    }
+    "cases": 888,
+    "status": "confirmed"
   },
   {
     "date": "2014-07-28T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 1293,
-      "total": 4111
-    }
+    "cases": 1293,
+    "status": "confirmed"
   },
   {
     "date": "2014-08-15T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 2127,
-      "total": 6238
-    }
+    "cases": 2127,
+    "status": "confirmed"
   },
   {
     "date": "2014-09-02T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 3525,
-      "total": 9763
-    }
+    "cases": 3525,
+    "status": "confirmed"
   },
   {
     "date": "2014-09-20T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 5606,
-      "total": 15369
-    }
+    "cases": 5606,
+    "status": "confirmed"
   },
   {
     "date": "2014-10-08T00:00:00.000Z",
-    "status": "confirmed",
-    "cases": {
-      "new": 8033,
-      "total": 23402
-    }
+    "cases": 8033,
+    "status": "confirmed"
   }
 ]
