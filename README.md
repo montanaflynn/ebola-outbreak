@@ -37,5 +37,4 @@ ebola.rate(function(err, rate){
 
 - Add country specific data
 - Include death counts
-- Write tests with framework
 - Add different output types

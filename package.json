@@ -6,12 +6,16 @@
   "main": "index.js",
   "license": "ISC",
   "scripts": {
-    "test": "node test.js"
+    "test": "mocha --timeout 10000 test/"
   },
   "dependencies": {
     "csv-parse": "0.0.6",
     "regression": "^1.2.0",
     "unirest": "^0.2.9"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1"
   },
   "homepage": "https://github.com/montanaflynn/ebola-outbreak",
   "repository": {
