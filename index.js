@@ -139,8 +139,12 @@ function projectData(distance, data) {
 }
 
 function growthRate(data) {
-  var regressionData = pluckData(data)
-  return regression('exponential', regressionData).string
+  var caseGrowth = regression('exponential', pluckCases(data)).string
+  var deathGrowth = regression('exponential', pluckDeaths(data)).string
+  return {
+    "cases" : caseGrowth,
+    "deaths" : deathGrowth
+  }
 }
 
 function saveData(data, callback) {

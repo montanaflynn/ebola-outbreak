@@ -131,13 +131,41 @@ describe('Project', function(done){
 })
 
 describe('Rate', function(){
-  it('should return a string', function(done){
+  it('should return an object', function(done){
     ebola.rate(function(err,output){
-      assert.typeOf(output, 'string', 'Output is not a string');
+      assert.typeOf(output, 'object', 'Output is not an object');
+      done()
+    })
+  })
+
+  it('should return object with cases property', function(done){
+    ebola.rate(function(err,output){
+      assert(output.cases != undefined, 'Output does not include case growth rate');
       done()
     })
   })
   
+  it('should return object with deaths property', function(done){
+    ebola.rate(function(err,output){
+      assert(output.deaths != undefined, 'Output does not include death growth rate');
+      done()
+    })
+  })
+  
+  it('should return case growth rate as a string', function(done){
+    ebola.rate(function(err,output){
+      assert.typeOf(output.cases, 'string', 'Case output is not a string');
+      done()
+    })
+  })
+  
+  it('should return death growth rate as a string', function(done){
+    ebola.rate(function(err,output){
+      assert.typeOf(output.deaths, 'string', 'Death output is not a string');
+      done()
+    })
+  })
+
   it('should not return an error', function(done){
     ebola.rate(function(err,output){
       assert(!err, 'Error is returned');
