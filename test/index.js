@@ -2,48 +2,63 @@ var assert = require('chai').assert
 var ebola = require('../index.js')
 
 describe('Cases', function(){
+
   it('should return an array', function(done){
     ebola.cases(function(err,output){
       assert.typeOf(output, 'array', 'Output is not an array');
       done()
     })
   })
+
   it('should return a non-empty array', function(done){
     ebola.cases(function(err,output){
       assert(output.length != 0, 'Output length is zero');
       done()
     })
   })
+
   it('should return an array of objects', function(done){
     ebola.cases(function(err,output){
       assert.typeOf(output[0], 'object', 'Output does not include objects');
       done()
     })
   })
+
   it('should return objects with date property', function(done){
     ebola.cases(function(err,output){
       assert(output[0].date != undefined, 'Output does not include date');
       done()
     })
   })
+
   it('should return objects with cases property', function(done){
     ebola.cases(function(err,output){
       assert(output[0].cases != undefined, 'Output does not include cases');
       done()
     })
   })
+
+  it('should return objects with deaths property', function(done){
+    ebola.cases(function(err,output){
+      assert(output[0].deaths != undefined, 'Output does not include deaths');
+      done()
+    })
+  })
+
   it('should return objects with status property', function(done){
     ebola.cases(function(err,output){
       assert(output[0].status != undefined, 'Output does not include status');
       done()
     })
   })
+
   it('should not return an error', function(done){
     ebola.cases(function(err,output){
       assert(!err, 'Error is returned');
       done()
     })
   })
+
 })
 
 describe('Project', function(done){
@@ -57,42 +72,56 @@ describe('Project', function(done){
       done()
     })
   })
+  
   it('should return an array', function(done){
     ebola.project(5, function(err,output){
       assert.typeOf(output, 'array', 'Output is not an array');
       done()
     })
   })
+  
   it('should return a non-empty array', function(done){
     ebola.project(5, function(err,output){
       assert(output.length != 0, 'Output length is zero');
       done()
     })
   })
+  
   it('should return an array of objects', function(done){
     ebola.project(5, function(err,output){
       assert.typeOf(output[0], 'object', 'Output does not include objects');
       done()
     })
   })
+  
   it('should return objects with date property', function(done){
     ebola.project(5, function(err,output){
       assert(output[0].date != undefined, 'Output does not include date');
       done()
     })
   })
+  
   it('should return objects with cases property', function(done){
     ebola.project(5, function(err,output){
       assert(output[0].cases != undefined, 'Output does not include cases');
       done()
     })
   })
+  
+  it('should return objects with deaths property', function(done){
+    ebola.project(5, function(err,output){
+      assert(output[0].deaths != undefined, 'Output does not include deaths');
+      done()
+    })
+  })
+  
   it('should return objects with status property', function(done){
     ebola.project(5, function(err,output){
       assert(output[0].status != undefined, 'Output does not include status');
       done()
     })
   })
+  
   it('should not return an error', function(done){
     ebola.project(5, function(err,output){
       assert(!err, 'Error is returned');
@@ -108,6 +137,7 @@ describe('Rate', function(){
       done()
     })
   })
+  
   it('should not return an error', function(done){
     ebola.rate(function(err,output){
       assert(!err, 'Error is returned');

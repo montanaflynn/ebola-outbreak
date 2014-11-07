@@ -1,6 +1,6 @@
 # Ebola Outbreak
 
-Powered by data obtained from [HealthMap](http://healthmap.org/ebola/) who in turn got it from the [World Health Organization](http://www.who.int/en/). The data is updated every 18 days so it is cached in `./data/cases.json` until an update is available.
+Powered by [data](https://github.com/montanaflynn/ebola-outbreak-data) obtained from the [World Health Organization](http://www.who.int/en/). 
 
 ### Install
 
@@ -15,20 +15,20 @@ var ebola = require('ebola-outbreak')
 
 // Return all the confirmed cases
 ebola.cases(function(err, cases){
-	if (err) throw err
-	console.log(cases)
+  if (err) throw err
+  console.log(cases)
 })
 
 // Return confirmed cases plus 5 projections:
-ebola.project(5, function(err, data){
-	if (err) throw err
-	console.log(data)
+ebola.project(5, function(err, projections){
+  if (err) throw err
+  console.log(projections)
 })
 
 // Return the latest growth rate:
 ebola.rate(function(err, rate){
-    if (err) throw err
-    console.log(rate)
+  if (err) throw err
+  console.log(rate)
 })
 
 ```
@@ -36,5 +36,4 @@ ebola.rate(function(err, rate){
 ### Todos
 
 - Add country specific data
-- Include death counts
 - Add different output types

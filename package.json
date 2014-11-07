@@ -1,7 +1,7 @@
 {
   "version": "0.2.4",
   "name": "ebola-outbreak",
-  "description": "Ebola confirmed cases and simple projections",
+  "description": "Ebola outbreak data, projections and growth rate.",
   "author": "Montana Flynn",
   "main": "index.js",
   "license": "ISC",
