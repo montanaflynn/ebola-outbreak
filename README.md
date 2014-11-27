@@ -1,4 +1,4 @@
-# Ebola Outbreak
+# Ebola Outbreak [![NPM Version](http://img.shields.io/npm/v/ebola-outbreak.svg?style=flat-square)](https://www.npmjs.org/package/ebola-outbreak) [![wercker continuous integration testing](http://img.shields.io/wercker/ci/546b83aba60c33c27c02add4.svg?style=flat-square)](https://app.wercker.com/project/bykey/424955e2b6029e7fbc3412bcc63d833f) [![npm dependencies](http://img.shields.io/david/montanaflynn/ebola-outbreak.svg?style=flat-square)](https://david-dm.org/montanaflynn/ebola-outbreak)
 
 Powered by [data](https://github.com/montanaflynn/ebola-outbreak-data) obtained from the [World Health Organization](http://www.who.int/en/). 
 
