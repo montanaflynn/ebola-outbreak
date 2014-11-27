@@ -3,7 +3,7 @@ var unirest = require('unirest')
 var parse = require('csv-parse')
 var regression = require('regression')
 
-var dataFile = __dirname + '/data/cases.json'
+var dataFile = __dirname + '/data/data.json'
 
 module.exports = {
   cases: function(callback) {
@@ -31,6 +31,7 @@ module.exports = {
 }
 
 function getData(callback) {
+  // Todo: Add check so only downloads once per day
   unirest
     .get('https://raw.githubusercontent.com/montanaflynn/ebola-outbreak-data/master/ebola-outbreak-data.csv')
     .end(function(res) {
@@ -148,7 +149,7 @@ function growthRate(data) {
 }
 
 function saveData(data, callback) {
-  fs.writeFile(dataFile, JSON.stringify(data, null, 2), function(err) {
+  fs.writeFile(dataFile, JSON.stringify(data, null, 4), function(err) {
     if (err) throw err
     callback()
   })
