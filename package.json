@@ -11,10 +11,10 @@
   "dependencies": {
     "csv-parse": "0.0.6",
     "regression": "^1.2.0",
-    "unirest": "^0.2.9"
+    "unirest": "^0.3.0"
   },
   "devDependencies": {
-    "chai": "^1.9.2",
+    "chai": "^1.10.0",
     "mocha": "^2.0.1"
   },
   "homepage": "https://github.com/montanaflynn/ebola-outbreak",
